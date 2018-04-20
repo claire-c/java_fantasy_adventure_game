@@ -10,16 +10,13 @@ public abstract class Healer extends Character {
 
     public Healer(String name){
         super(name);
-        this.healingTool = randomTool();
+        this.healingTool = HealingTool.getRandomHealingTool();
     }
 
     public HealingTool getHealingTool() {
         return healingTool;
     }
 
-    public HealingTool randomTool(){
-
-    }
 
 
 }

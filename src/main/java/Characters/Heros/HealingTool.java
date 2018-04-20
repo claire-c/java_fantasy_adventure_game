@@ -22,7 +22,7 @@ public enum HealingTool {
         this.chanceValue = chanceValue;
     }
 
-    public int getHealingValueValue() {
+    public int getHealingValue() {
         return healingValue;
     }
 
