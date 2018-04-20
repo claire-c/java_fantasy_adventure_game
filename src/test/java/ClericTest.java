@@ -9,7 +9,11 @@ public class ClericTest {
     @Before
     public void setup(){
         cleric = new Cleric("Tony");
+
     }
+
+    @Test
+    
 
 
 }
