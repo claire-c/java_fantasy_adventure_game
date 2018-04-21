@@ -6,27 +6,12 @@ import java.util.Random;
 
 public abstract class Character {
 
-    private String name;
+    protected String name;
     protected int hp;
-    private CreatureType type;
-    private int mv1DamageValue;
-    private int mv1ChanceValue;
-    private int mv2DamageValue;
-    private int mv2ChanceValue;
 
     public Character(String name){
         this.name = name;
         this.hp = 100;
-    }
-
-    public Character(CreatureType type){
-        this.name = type.getName();
-        this.type = type;
-        this.hp = type.getHp();
-//        this.mv1DamageValue = type.getMv1DamageValue();
-//        this.mv1ChanceValue = type.getMv1ChanceValue();
-//        this.mv2DamageValue = type.getMv2DamageValue();
-//        this.mv2ChanceValue = type.getMv2ChanceValue();
     }
 
     public String getName() {
@@ -68,14 +53,15 @@ public abstract class Character {
 
     //move1
     public void standardMove(Character characterToAttack){
-        if(shouldDoMove(this.mv1ChanceValue)){characterToAttack.takeDamage(this.mv1DamageValue);}
     }
 
     //move2
     public void signatureMove(Character characterToAttack){
-        if(shouldDoMove(this.mv2ChanceValue)){characterToAttack.takeDamage(this.mv2DamageValue);}
+
     }
 
-
-
 }
+
+
+
+

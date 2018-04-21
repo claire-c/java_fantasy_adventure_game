@@ -4,17 +4,15 @@ import Characters.Character;
 
 public class Creature extends Character {
 
-    private String name;
+
     private CreatureType type;
-    private int hp;
     private int mv1DamageValue;
     private int mv1ChanceValue;
     private int mv2DamageValue;
     private int mv2ChanceValue;
 
     public Creature(CreatureType type){
-        super(type);
-        this.name = type.getName();
+        super(type.getName());
         this.type = type;
         this.hp = type.getHp();
         this.mv1DamageValue = type.getMv1DamageValue();
