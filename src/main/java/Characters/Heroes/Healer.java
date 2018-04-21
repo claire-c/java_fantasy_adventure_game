@@ -2,7 +2,7 @@ package Characters.Heroes;
 
 import Characters.Character;
 
-public abstract class Healer extends Character {
+public abstract class Healer extends Hero {
 
     private String name;
     private int hp;

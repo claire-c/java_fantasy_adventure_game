@@ -1,8 +1,6 @@
 package Characters.Heroes;
 
-import Characters.Character;
-
-public abstract class Fighter extends Character {
+public abstract class Fighter extends Hero {
 
     private String name;
     private int hp;
