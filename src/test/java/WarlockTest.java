@@ -62,11 +62,11 @@ public class WarlockTest {
     @Test
     public void canRemoveTreasure(){
         warlock.addToInventory(Treasure.BRANDEDPEN);
-        assertEquals(Treasure.BRANDEDPEN, warlock.removeTreasureFromInventory());
+        assertEquals(Treasure.BRANDEDPEN, warlock.removeFromInventory());
     }
 
     @Test public void removeTreasureWontBreakIfInventoryEmpty(){
-        assertEquals(null, warlock.removeTreasureFromInventory());
+        assertEquals(null, warlock.removeFromInventory());
     }
 
     @Test
@@ -98,7 +98,7 @@ public class WarlockTest {
 //        warlock.standardMove(troll);
 //        assertEquals(80, troll.getHp());
 //    }
-    //These two tests are passing, but due to random nature of dice roll will occasionally fail. But it seems to be working.
+    //These two tests are passing, but due to random nature of dice roll will occasionally fail.
 
 
 

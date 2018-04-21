@@ -19,7 +19,7 @@ public abstract class Hero extends Character {
         inventory.add(treasureItem);
     }
 
-    public Treasure removeTreasureFromInventory(){
+    public Treasure removeFromInventory(){
         Treasure itemToRemove = null;
         if(inventory.size() > 0){itemToRemove = inventory.remove(0);}
         return itemToRemove;
