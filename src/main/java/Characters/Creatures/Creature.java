@@ -14,6 +14,13 @@ public class Creature extends Character {
 
     public Creature(CreatureType type){
         super(type);
+        this.name = type.getName();
+        this.type = type;
+        this.hp = type.getHp();
+        this.mv1DamageValue = type.getMv1DamageValue();
+        this.mv1ChanceValue = type.getMv1ChanceValue();
+        this.mv2DamageValue = type.getMv2DamageValue();
+        this.mv2ChanceValue = type.getMv2ChanceValue();
     }
 
     public CreatureType getType() {

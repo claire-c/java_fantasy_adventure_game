@@ -23,18 +23,18 @@ public abstract class Character {
         this.name = type.getName();
         this.type = type;
         this.hp = type.getHp();
-        this.mv1DamageValue = type.getMv1DamageValue();
-        this.mv1ChanceValue = type.getMv1ChanceValue();
-        this.mv2DamageValue = type.getMv2DamageValue();
-        this.mv2ChanceValue = type.getMv2ChanceValue();
+//        this.mv1DamageValue = type.getMv1DamageValue();
+//        this.mv1ChanceValue = type.getMv1ChanceValue();
+//        this.mv2DamageValue = type.getMv2DamageValue();
+//        this.mv2ChanceValue = type.getMv2ChanceValue();
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getHp() {
-        return hp;
+        return this.hp;
     }
 
     public void setHp(int hp) {
@@ -56,6 +56,7 @@ public abstract class Character {
     public void takeDamage(int damage){
         setHp(damage);
     }
+
 
 
 }

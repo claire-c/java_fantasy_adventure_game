@@ -34,5 +34,5 @@ public class CreatureTypeTest {
     public void canGetMv2ChanceValue(){
         assertEquals(1, CreatureType.TROLL.getMv2ChanceValue());
     }
-    
+
 }
