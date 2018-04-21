@@ -1,5 +1,6 @@
 import Characters.Creatures.Creature;
 import Characters.Creatures.CreatureType;
+import Characters.Heroes.Cleric;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,12 +11,13 @@ public class CreatureTest {
     private Creature troll;
     private Creature dragon;
     private Creature ex;
+    private Cleric cleric;
 
     @Before
     public void setup(){
         troll = new Creature(CreatureType.TROLL);
-        dragon = new Creature(CreatureType.DRAGON);
         ex = new Creature(CreatureType.EX);
+        cleric = new Cleric("Tony");
     }
 
     @Test
@@ -51,7 +53,7 @@ public class CreatureTest {
 
     @Test
     public void canGetMv2ChanceValue(){
-        assertEquals(1, troll.getMv2ChanceValue());
+        assertEquals(2, troll.getMv2ChanceValue());
     }
 
     @Test
@@ -70,6 +72,40 @@ public class CreatureTest {
         troll.beHealed(10);
         assertEquals(110, troll.getHp());
     }
+
+//    @Test
+//    public void exWillSometimesAttackStandardMove(){
+//        ex.standardMove(cleric);
+//        assertEquals(80, cleric.getHp());
+//    }
+
+    @Test
+    public void exWillAlwaysAttackSignatureMove(){
+        ex.signatureMove(cleric);
+        assertEquals(40, cleric.getHp());
+    }
+
+    @Test
+    public void trollWillRarelyAttackSignatureMove(){
+        troll.signatureMove(cleric);
+        assertEquals(100, cleric.getHp());
+    }
+
+//
+//    @Test
+//    public void trollWillOnlySometimesAttack(){
+//        troll.standardMove(cleric);
+//        assertEquals(70, cleric.getHp());
+//    }
+    //This is to test that the standardMove is working with a random element. It is, but as its random will not always pass.
+
+
+//
+//    @Test
+//    public void creatureCanPotentiallyAttack(){
+//                assertTrue(troll.shouldAttack(troll.getMv1ChanceValue()));
+//    }
+    //This to test the shouldAttack is working. It is but as it's random will not always pass.
 
 
 

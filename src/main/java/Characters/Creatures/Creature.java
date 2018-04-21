@@ -43,4 +43,16 @@ public class Creature extends Character {
     public int getMv2ChanceValue() {
         return mv2ChanceValue;
     }
+
+    //move1
+    public void standardMove(Character characterToAttack){
+        if(shouldAttack(this.mv1ChanceValue)){characterToAttack.takeDamage(this.mv1DamageValue);}
+    }
+
+    //move2
+    public void signatureMove(Character characterToAttack){
+        if(shouldAttack(this.mv2ChanceValue)){characterToAttack.takeDamage(this.mv2DamageValue);}
+    }
+
+
 }
