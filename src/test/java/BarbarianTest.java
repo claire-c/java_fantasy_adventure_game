@@ -41,16 +41,17 @@ public class BarbarianTest {
 
 //    Commented out due to randomness of tests.
 
-//    @Test
-//    public void canUseStandardMove() {
-//        barb1.standardMove(dragon1);
-//        assertEquals(120, dragon1.getHp());
-//    }
-//
-//    @Test
-//    public void canUseSignatureMove(){
-//        barb1.signatureMove(dragon1);
-//        assertEquals(0, dragon1.getHp());
-//    }
+    @Test
+    public void canUseStandardMove() {
+        barb1.standardMove(dragon1);
+        assertEquals(120, dragon1.getHp());
+    }
+
+    @Test
+    public void canUseSignatureMove(){
+        barb1.setHp(10);
+        barb1.signatureMove(dragon1);
+        assertEquals(0, dragon1.getHp());
+    }
 
 }
