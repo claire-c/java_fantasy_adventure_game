@@ -61,19 +61,19 @@ public abstract class Character {
         hp += health;
     }
 
-    public boolean shouldAttack(int chanceValue){
+    public boolean shouldDoMove(int chanceValue){
         if(diceRoll() <= chanceValue){return true;}
         else{return false;}
     }
 
     //move1
     public void standardMove(Character characterToAttack){
-        if(shouldAttack(this.mv1ChanceValue)){characterToAttack.takeDamage(this.mv1DamageValue);}
+        if(shouldDoMove(this.mv1ChanceValue)){characterToAttack.takeDamage(this.mv1DamageValue);}
     }
 
     //move2
     public void signatureMove(Character characterToAttack){
-        if(shouldAttack(this.mv2ChanceValue)){characterToAttack.takeDamage(this.mv2DamageValue);}
+        if(shouldDoMove(this.mv2ChanceValue)){characterToAttack.takeDamage(this.mv2DamageValue);}
     }
 
 

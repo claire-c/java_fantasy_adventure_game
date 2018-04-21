@@ -7,7 +7,8 @@ public enum HealingTool {
     POTION(20, 8),
     BITTEROOT(10, 10),
     AGOODSNOOZE(50, 3),
-    HERBS(30, 5);
+    HERBS(30, 5),
+    RESURRECTION(100, 2);
 
     public final int healingValue;
     public final int chanceValue;

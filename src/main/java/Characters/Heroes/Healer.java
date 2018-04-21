@@ -26,6 +26,21 @@ public abstract class Healer extends Character {
     }
 
 
+    //move1. This move uses whatever healingTool the healer is in ownership of.
+    public void standardMove(Character characterToHeal){
+        if(shouldDoMove(this.healingTool.chanceValue)){
+            characterToHeal.beHealed(this.healingTool.healingValue);
+        }
+    }
+
+    //move2. This move resurrects the player with 100 hp, but the likelihood of it happening is low as the chance value is 2.
+    public void signatureMove(Character characterToHeal){
+        if(shouldDoMove(HealingTool.RESURRECTION.chanceValue)){
+            characterToHeal.beHealed(HealingTool.RESURRECTION.healingValue);
+        }
+    }
+
+
 //    public void randomHealingTool() {
 //        int result = getRandomNumber(4);
 //        if (result == 0) {
@@ -38,4 +53,7 @@ public abstract class Healer extends Character {
 //            this.healingTool = HealingTool.HERBS;
 //        }
 //    }
+
+
+
 }
