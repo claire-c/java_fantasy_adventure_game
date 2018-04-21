@@ -54,7 +54,7 @@ public abstract class Character {
     }
 
     public void takeDamage(int damage){
-        setHp(damage);
+        hp -= damage;
     }
 
 

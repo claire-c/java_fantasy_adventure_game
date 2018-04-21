@@ -62,6 +62,12 @@ public class ClericTest {
         assertEquals(2, cleric.diceRoll());
     }
 
+    @Test
+    public void canTakeDamage(){
+        cleric.takeDamage(20);
+        assertEquals(80, cleric.getHp());
+    }
+
 
 
 //    @Test

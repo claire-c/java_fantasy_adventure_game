@@ -59,6 +59,12 @@ public class CreatureTest {
         assertEquals(CreatureType.TROLL, troll.getType());
     }
 
+    @Test
+    public void creatureCanTakeDamage(){
+        troll.takeDamage(20);
+        assertEquals(80, troll.getHp());
+    }
+
 
 
 }
