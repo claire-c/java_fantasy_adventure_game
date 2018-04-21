@@ -7,7 +7,7 @@ import java.util.Random;
 public abstract class Character {
 
     private String name;
-    private int hp;
+    protected int hp;
     private CreatureType type;
     private int mv1DamageValue;
     private int mv1ChanceValue;

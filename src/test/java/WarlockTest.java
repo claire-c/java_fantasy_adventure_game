@@ -86,6 +86,7 @@ public class WarlockTest {
         warlock.beHealed(20);
         assertEquals(120, warlock.getHp());
     }
+
 //
 //    @Test
 //    public void canDoSignatureMove(){

@@ -5,8 +5,6 @@ import Characters.Heroes.Hero;
 
 public abstract class Fighter extends Hero {
 
-    private String name;
-    private int hp;
     protected Weapon weapon;
     protected Defence defence;
 
