@@ -1,22 +1,23 @@
-package Characters.Heroes;
+package Characters.Heroes.Mages;
 
 import java.util.Random;
 
-public enum Weapon {
+public enum Spell {
 
-    SWORD(20, 10),
-    CLUB(30, 8),
-    AXE(40, 6),
-    TINYAXE(10, 10);
+
+    FIREBALL(30, 6),
+    LIGHTENING(70, 3),
+    BLINDNESS(80, 2),
+    CONFUSION(20, 10);
 
     public final int damageValue;
     public final int chanceValue;
-    private static final Weapon[] VALUES = values();
+    private static final Spell[] VALUES = values();
     private static final int SIZE = VALUES.length;
     private static final Random RANDOM = new Random();
 
 
-    Weapon(int damageValue, int chanceValue) {
+    Spell(int damageValue, int chanceValue) {
         this.damageValue = damageValue;
         this.chanceValue = chanceValue;
     }
@@ -29,9 +30,8 @@ public enum Weapon {
         return chanceValue;
     }
 
-    public static Weapon getRandomWeapon() {
+    public static Spell getRandomSpell() {
         return VALUES[RANDOM.nextInt(SIZE)];
     }
-
 
 }

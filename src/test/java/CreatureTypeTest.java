@@ -32,7 +32,7 @@ public class CreatureTypeTest {
 
     @Test
     public void canGetMv2ChanceValue(){
-        assertEquals(1, CreatureType.TROLL.getMv2ChanceValue());
+        assertEquals(2, CreatureType.TROLL.getMv2ChanceValue());
     }
 
 }

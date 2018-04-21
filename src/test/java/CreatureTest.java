@@ -1,6 +1,6 @@
 import Characters.Creatures.Creature;
 import Characters.Creatures.CreatureType;
-import Characters.Heroes.Cleric;
+import Characters.Heroes.Healers.Cleric;
 import org.junit.Before;
 import org.junit.Test;
 

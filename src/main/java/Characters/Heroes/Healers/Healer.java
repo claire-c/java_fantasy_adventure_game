@@ -1,6 +1,7 @@
-package Characters.Heroes;
+package Characters.Heroes.Healers;
 
 import Characters.Character;
+import Characters.Heroes.Hero;
 
 public abstract class Healer extends Hero {
 

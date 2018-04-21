@@ -1,4 +1,4 @@
-package Characters.Heroes;
+package Characters.Heroes.Healers;
 
 import java.util.Random;
 

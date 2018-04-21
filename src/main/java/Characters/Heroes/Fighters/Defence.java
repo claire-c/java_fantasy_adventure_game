@@ -1,4 +1,4 @@
-package Characters.Heroes;
+package Characters.Heroes.Fighters;
 
 public enum Defence {
 

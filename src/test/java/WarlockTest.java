@@ -1,7 +1,8 @@
 import Characters.Creatures.Creature;
 import Characters.Creatures.CreatureType;
-import Characters.Heroes.Spell;
-import Characters.Heroes.Warlock;
+import Characters.Heroes.Mages.Spell;
+import Characters.Heroes.Mages.Warlock;
+import Characters.Heroes.Treasure;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,6 +41,19 @@ public class WarlockTest {
     public void canSetCreature(){
         warlock.setCreature(troll);
         assertEquals(CreatureType.TROLL, warlock.getCreature().getType());
+    }
+
+    @Test
+    public void canAddTreasure(){
+        warlock.addToInventory(Treasure.BRANDEDPEN);
+        assertEquals(1, warlock.getInventory().size());
+    }
+
+    @Test
+    public void canGetTreasureTotal(){
+        warlock.addToInventory(Treasure.BRANDEDPEN);
+        warlock.addToInventory(Treasure.BRANDEDPEN);
+        assertEquals(6, warlock.getTotalTreasureValue());
     }
 //
 //    @Test

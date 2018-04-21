@@ -1,9 +1,10 @@
-package Characters.Heroes;
+package Characters.Heroes.Mages;
 
 import Characters.Creatures.Creature;
 import Characters.Character;
+import Characters.Heroes.Hero;
 
-public abstract class Mage extends Hero{
+public abstract class Mage extends Hero {
 
     private String name;
     private int hp;

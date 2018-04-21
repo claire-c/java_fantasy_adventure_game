@@ -1,8 +1,8 @@
-import Characters.Heroes.HealingTool;
+import Characters.Heroes.Healers.HealingTool;
 import Characters.Heroes.Treasure;
 import org.junit.Before;
 import org.junit.Test;
-import Characters.Heroes.Cleric;
+import Characters.Heroes.Healers.Cleric;
 
 import static org.junit.Assert.assertEquals;
 

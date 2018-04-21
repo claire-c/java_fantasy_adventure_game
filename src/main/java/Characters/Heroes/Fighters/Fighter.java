@@ -1,4 +1,6 @@
-package Characters.Heroes;
+package Characters.Heroes.Fighters;
+
+import Characters.Heroes.Hero;
 
 public abstract class Fighter extends Hero {
 

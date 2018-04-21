@@ -1,4 +1,4 @@
-package Characters.Heroes;
+package Characters.Heroes.Healers;
 
 public class Cleric extends Healer {
 
