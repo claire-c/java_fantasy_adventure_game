@@ -38,6 +38,16 @@ public class WarlockTest {
     }
 
     @Test
+    public void canGetSpellDamageValue(){
+        assertEquals(20, warlock.getSpell().getDamageValue());
+    }
+
+    @Test
+    public void canGetSpellChanceValue(){
+        assertEquals(10, warlock.getSpell().getChanceValue());
+    }
+
+    @Test
     public void canSetCreature(){
         warlock.setCreature(troll);
         assertEquals(CreatureType.TROLL, warlock.getCreature().getType());
@@ -50,10 +60,31 @@ public class WarlockTest {
     }
 
     @Test
+    public void canRemoveTreasure(){
+        warlock.addToInventory(Treasure.BRANDEDPEN);
+        assertEquals(Treasure.BRANDEDPEN, warlock.removeTreasureFromInventory());
+    }
+
+    @Test public void removeTreasureWontBreakIfInventoryEmpty(){
+        assertEquals(null, warlock.removeTreasureFromInventory());
+    }
+
+    @Test
     public void canGetTreasureTotal(){
         warlock.addToInventory(Treasure.BRANDEDPEN);
         warlock.addToInventory(Treasure.BRANDEDPEN);
         assertEquals(6, warlock.getTotalTreasureValue());
+    }
+
+    @Test
+    public void treasureTotalWontBreakIfInventoryEmpty(){
+        assertEquals( 0, warlock.getTotalTreasureValue());
+    }
+
+    @Test
+    public void canBeHealed(){
+        warlock.beHealed(20);
+        assertEquals(120, warlock.getHp());
     }
 //
 //    @Test
