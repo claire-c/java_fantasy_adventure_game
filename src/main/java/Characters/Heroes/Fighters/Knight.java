@@ -1,4 +1,26 @@
 package Characters.Heroes.Fighters;
 
-public class Knight {
+import Characters.Character;
+
+public class Knight extends Fighter {
+    private Weapon weapon;
+    private Defence defence;
+
+    public Knight(String name){
+        super(name);
+        this.weapon = Weapon.SWORD;
+        this.defence = Defence.SHIELD;
+    }
+
+    public int stab(){
+        return 20;
+    }
+
+    //move2
+    //For the knight the stab has 100% chance of hitting.
+    public void signatureMove(Character characterToAttack){
+       {characterToAttack.takeDamage(this.stab());}
+    }
+
+
 }
