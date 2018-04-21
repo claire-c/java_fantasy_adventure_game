@@ -1,15 +1,32 @@
 package Characters;
 
+import Characters.Creatures.CreatureType;
+
 import java.util.Random;
 
 public abstract class Character {
 
     private String name;
     private int hp;
+    private CreatureType type;
+    private int mv1DamageValue;
+    private int mv1ChanceValue;
+    private int mv2DamageValue;
+    private int mv2ChanceValue;
 
     public Character(String name){
         this.name = name;
         this.hp = 100;
+    }
+
+    public Character(CreatureType type){
+        this.name = type.getName();
+        this.type = type;
+        this.hp = type.getHp();
+        this.mv1DamageValue = type.getMv1DamageValue();
+        this.mv1ChanceValue = type.getMv1ChanceValue();
+        this.mv2DamageValue = type.getMv2DamageValue();
+        this.mv2ChanceValue = type.getMv2ChanceValue();
     }
 
     public String getName() {
@@ -34,6 +51,10 @@ public abstract class Character {
     public int getRandomNumber(int max) {
         Random rand = new Random();
         return rand.nextInt(max);
+    }
+
+    public void takeDamage(int damage){
+        setHp(damage);
     }
 
 

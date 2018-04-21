@@ -1,7 +1,7 @@
 package Characters.Heroes;
 
-import Characters.Creatures.Creature;
 import Characters.Character;
+import Characters.Creatures.Creature;
 
 public abstract class Mage extends Character{
 
@@ -10,11 +10,13 @@ public abstract class Mage extends Character{
     private Spell spell;
     private Creature creature;
 
-    public Mage(String name){
+    public Mage(String name, Spell spell, Creature creature){
         super(name);
-        this.spell = Spell.getRandomSpell();
-        this.creature = Creature.getRandomCreature();
+//        this.spell = Spell.getRandomSpell();
+//        this.creature = Creature.getRandomCreature();
         //Massive problem still with this random element for newing up objects. Need to fix.
+        this.spell = spell;
+        this.creature = creature;
     }
 
     public Creature getCreature(){
