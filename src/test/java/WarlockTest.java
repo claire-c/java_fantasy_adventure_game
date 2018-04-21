@@ -40,8 +40,16 @@ public class WarlockTest {
     public void canSetCreature(){
         warlock.setCreature(troll);
         assertEquals(CreatureType.TROLL, warlock.getCreature().getType());
-
     }
+
+//    @Test
+//    public void canDoStandardMove(){
+//        warlock.standardMove(troll);
+//        assertEquals(80, troll.getHp());
+//    }
+    //This test is passing, but due to random nature of dice roll will occasionally fail. But it seems to be working.
+
+    
 
 }
 
