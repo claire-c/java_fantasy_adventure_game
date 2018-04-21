@@ -1,6 +1,4 @@
-package Characters.Heros;
-
-import Characters.Heros.Healer;
+package Characters.Heroes;
 
 public class Cleric extends Healer {
 
@@ -16,4 +14,8 @@ public class Cleric extends Healer {
 
 
 
+
+
+
 }
+

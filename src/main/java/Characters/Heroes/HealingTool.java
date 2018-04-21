@@ -1,12 +1,11 @@
-package Characters.Heros;
+package Characters.Heroes;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public enum HealingTool {
 
     POTION(20, 8),
-    BITTERROOT(10, 10),
+    BITTEROOT(10, 10),
     AGOODSNOOZE(50, 3),
     HERBS(30, 5);
 

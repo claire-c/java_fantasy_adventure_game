@@ -1,5 +1,7 @@
 package Characters;
 
+import java.util.Random;
+
 public abstract class Character {
 
     private String name;
@@ -23,7 +25,16 @@ public abstract class Character {
     }
 
 
+    public int diceRoll() {
+        Random rand = new Random();
+        return 2 + rand.nextInt((12 - 2) + 1);
 
+    }
+
+    public int getRandomNumber(int max) {
+        Random rand = new Random();
+        return rand.nextInt(max);
+    }
 
 
 }
