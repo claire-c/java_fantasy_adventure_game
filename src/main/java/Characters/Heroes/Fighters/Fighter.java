@@ -1,5 +1,6 @@
 package Characters.Heroes.Fighters;
 
+import Characters.Character;
 import Characters.Heroes.Hero;
 
 public abstract class Fighter extends Hero {
@@ -34,5 +35,14 @@ public abstract class Fighter extends Hero {
 
     public void takeDamage(int damage){
         this.hp -= (damage * defence.getDefenceValue());
+    }
+
+    public int wield(Weapon weapon){
+        return weapon.damageValue;
+    }
+
+    //move1
+    public void standardMove(Character characterToAttack){
+        if(shouldDoMove(this.weapon.chanceValue)){characterToAttack.takeDamage(this.wield(weapon));}
     }
 }
