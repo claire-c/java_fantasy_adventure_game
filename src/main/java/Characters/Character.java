@@ -57,6 +57,10 @@ public abstract class Character {
         hp -= damage;
     }
 
+    public void beHealed(int health){
+        hp += health;
+    }
+
 
 
 }

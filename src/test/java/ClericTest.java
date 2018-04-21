@@ -68,6 +68,12 @@ public class ClericTest {
         assertEquals(80, cleric.getHp());
     }
 
+    @Test
+    public void canBeHealed(){
+        cleric.beHealed(10);
+        assertEquals(110, cleric.getHp());
+    }
+
 
 
 //    @Test

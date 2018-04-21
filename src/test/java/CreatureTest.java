@@ -65,6 +65,12 @@ public class CreatureTest {
         assertEquals(80, troll.getHp());
     }
 
+    @Test
+    public void creatureCanBeHealed(){
+        troll.beHealed(10);
+        assertEquals(110, troll.getHp());
+    }
+
 
 
 }
