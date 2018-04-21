@@ -1,4 +1,5 @@
 import Characters.Heroes.HealingTool;
+import Characters.Heroes.Treasure;
 import org.junit.Before;
 import org.junit.Test;
 import Characters.Heroes.Cleric;
@@ -72,6 +73,19 @@ public class ClericTest {
     public void canBeHealed(){
         cleric.beHealed(10);
         assertEquals(110, cleric.getHp());
+    }
+
+    @Test
+    public void canAddToInventory(){
+        cleric.addToInventory(Treasure.DIAMOND);
+        assertEquals(1, cleric.getInventory().size());
+    }
+
+    @Test
+    public void canGetTotalTreasureValue(){
+        cleric.addToInventory(Treasure.DIAMOND);
+        cleric.addToInventory(Treasure.FAKEMOUSTACHE);
+        assertEquals(51, cleric.getTotalTreasureValue());
     }
 
 

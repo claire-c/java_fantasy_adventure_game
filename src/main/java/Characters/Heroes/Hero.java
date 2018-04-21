@@ -15,7 +15,21 @@ public abstract class Hero extends Character {
         this.inventory = new ArrayList<Treasure>();
         }
 
+    public void addToInventory(Treasure treasureItem){
+        inventory.add(treasureItem);
+    }
 
+    public ArrayList<Treasure> getInventory() {
+        return inventory;
+    }
+
+    public int getTotalTreasureValue(){
+        int total = 0;
+        for(Treasure item : inventory){
+            total += item.getTreasureValue();
+        }
+        return total;
+    }
 
 
 
