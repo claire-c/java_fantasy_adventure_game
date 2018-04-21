@@ -5,8 +5,6 @@ import Characters.Heroes.Hero;
 
 public abstract class Healer extends Hero {
 
-    private String name;
-    private int hp;
     private HealingTool healingTool;
 
     public Healer(String name){

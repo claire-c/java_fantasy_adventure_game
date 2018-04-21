@@ -6,8 +6,6 @@ import Characters.Heroes.Hero;
 
 public abstract class Mage extends Hero {
 
-    private String name;
-    private int hp;
     private Spell spell;
     private Creature creature;
 
