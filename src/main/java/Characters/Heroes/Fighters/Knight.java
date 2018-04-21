@@ -3,8 +3,6 @@ package Characters.Heroes.Fighters;
 import Characters.Character;
 
 public class Knight extends Fighter {
-    private Weapon weapon;
-    private Defence defence;
 
     public Knight(String name){
         super(name);
