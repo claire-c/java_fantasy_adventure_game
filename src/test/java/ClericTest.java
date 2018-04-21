@@ -11,6 +11,7 @@ public class ClericTest {
 
     private Cleric cleric;
     private Cleric cleric2;
+    private Cleric cleric3;
     private HealingTool clericHealingTool;
 
     @Before
@@ -18,7 +19,9 @@ public class ClericTest {
         cleric = new Cleric("Tony");
         cleric2 = new Cleric("random");
         clericHealingTool = cleric.getHealingTool();
-
+        cleric3 = new Cleric("Brian");
+//        Attempt to save the randomised healingTool of cleric in a different "parking spot" to cleric itself by creating a new cleric who has a set value."
+        cleric3.setHealingTool(clericHealingTool);
     }
 
     @Test
@@ -41,6 +44,16 @@ public class ClericTest {
     public void canSetHealingTool(){
         cleric.setHealingTool(HealingTool.BITTEROOT);
         assertEquals(HealingTool.BITTEROOT, cleric.getHealingTool());
+    }
+
+    @Test
+    public void isCleric3ItsOwnParkingSpot(){
+        assertEquals(cleric.getHealingTool(),cleric3.getHealingTool());
+        cleric.getHealingTool();
+        cleric.standardMove(cleric2);
+        cleric.getHealingTool().getChanceValue();
+        cleric.getHealingTool().getHealingValue();
+        assertEquals(cleric.getHealingTool(), cleric3.getHealingTool());
     }
 
 //    @Test
