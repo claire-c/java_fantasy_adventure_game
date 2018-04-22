@@ -11,9 +11,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class RoomTest {
     private Room room1;
@@ -95,9 +93,37 @@ public class RoomTest {
     //Oh man, how to test for an array of fighters fighting?! With the debugger you can see that every time this test is run the fighters and/or creature take damage so the method is working.
 
     @Test
-    public void fightCanContinueUntilThereIsAWinner(){
-
+    public void allHeroesAreAlive(){
+        assertFalse(fullroom.allHeroesDead());
     }
+
+    @Test
+    public void allHeroesAreDead(){
+        hero1.setHp(0);
+        hero2.setHp(0);
+        hero3.setHp(0);
+        room1.addHeroes(hero1);
+        room1.addHeroes(hero2);
+        room1.addHeroes(hero3);
+        assertTrue(fullroom.allHeroesDead());
+    }
+
+    @Test
+    public void oneHeroIsAlive(){
+        hero3.setHp(0);
+        hero3.setHp(0);
+        room1.addHeroes(hero1);
+        room1.addHeroes(hero2);
+        room1.addHeroes(hero3);
+        assertFalse(fullroom.allHeroesDead());
+    }
+
+//    @Test
+//    public void fightCanContinueUntilThereIsAWinner(){
+//        fullroom.fight();
+//        assertEquals(0, fullroom.returnRemainingHeroes().size());
+//    }
+    //Another nightmare test - but it is returning variable array lengths, showing that the method is working. It also occasionally passes, showing that the monster has won. 
 
 //    @Test
 //    public void canFight(){

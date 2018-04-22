@@ -67,7 +67,26 @@ public class Room {
 
     }
 
-    
+    public boolean allHeroesDead(){
+        ArrayList<Hero> aliveHeroes = new ArrayList<>();
+        for(Hero hero : heroes){
+            if(!hero.characterDead()){
+                aliveHeroes.add(hero);
+            }
+        }
+        return aliveHeroes.isEmpty();
+    }
+
+    public void fight(){
+        while(!monster.characterDead() && !allHeroesDead()){
+            heroesFightMonster();
+        }
+
+    }
+
+
+
+
 
 //    public ArrayList<Character> encounter( ArrayList<Character> heroes){
 //
