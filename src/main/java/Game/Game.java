@@ -14,6 +14,21 @@ public class Game {
         this.name = name;
         this.rooms = new ArrayList<>();
         this.heroes = new ArrayList<>();
-        
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Room> getRooms() {
+        return rooms;
+    }
+
+    public ArrayList<Hero> getHeroes() {
+        return heroes;
+    }
+
+
+
+
 }
