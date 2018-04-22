@@ -1,7 +1,5 @@
 package Characters;
 
-import Characters.Creatures.CreatureType;
-
 import java.util.Random;
 
 public abstract class Character {
@@ -58,6 +56,12 @@ public abstract class Character {
     //move2
     public void signatureMove(Character characterToAttack){
 
+    }
+
+    public boolean characterDead(){
+        if(this.hp <= 0){return true;}
+        else
+        {return false;}
     }
 
 }

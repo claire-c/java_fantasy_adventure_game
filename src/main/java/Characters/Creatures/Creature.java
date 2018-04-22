@@ -52,11 +52,7 @@ public class Creature extends Character {
         if(shouldDoMove(this.mv2ChanceValue)){characterToAttack.takeDamage(this.mv2DamageValue);}
     }
 
-    public boolean creatureDead(){
-        if(this.hp <= 0){return true;}
-        else
-            {return false;}
-    }
+
 
 
 }

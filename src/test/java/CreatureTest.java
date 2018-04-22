@@ -95,13 +95,13 @@ public class CreatureTest {
 
     @Test
     public void creatureIsntDead(){
-        assertFalse(troll.creatureDead());
+        assertFalse(troll.characterDead());
     }
 
     @Test
     public void creatureIsDead(){
         troll.setHp(0);
-        assertTrue(troll.creatureDead());
+        assertTrue(troll.characterDead());
     }
 
 //
