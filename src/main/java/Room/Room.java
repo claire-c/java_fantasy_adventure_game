@@ -41,14 +41,14 @@ public class Room {
         heroes.add(hero);
     }
 
-    //To build up the encounter method - collectTreasure to be used as a conditional if any heroes remain alive.
+    //For encounter- collectTreasure to be used as a conditional if any heroes remain alive.
     public void heroesCollectTreasure(){
         Hero hero = heroes.get(0);
         hero.addToInventory(this.treasure);
         this.treasure = null;
     }
 
-    //To build up the encounter method - returning our heroes at the end of a fight if any remain alive afterwards.
+    //For encounter - returning our heroes at the end of a fight if any remain alive afterwards.
     public ArrayList<Hero> returnRemainingHeroes(){
         ArrayList<Hero> remainingHeroes = new ArrayList<>();
         for (Hero hero : heroes){
@@ -59,6 +59,7 @@ public class Room {
         return remainingHeroes;
     }
 
+    //For encounter. The heroes will all have a go at monster and monster will have a go at heroes.
     public void heroesFightMonster(){
         for(Hero hero : heroes){
             hero.standardMove(monster);
@@ -67,6 +68,7 @@ public class Room {
 
     }
 
+    //For encounter. A boolean to check is there are any heroes left alive after the fight round.
     public boolean allHeroesDead(){
         ArrayList<Hero> aliveHeroes = new ArrayList<>();
         for(Hero hero : heroes){
@@ -77,6 +79,7 @@ public class Room {
         return aliveHeroes.isEmpty();
     }
 
+    //For encounter. A loop to have heroes and creatures fight until there is a winner.
     public void fight(){
         while(!monster.characterDead() && !allHeroesDead()){
             heroesFightMonster();
