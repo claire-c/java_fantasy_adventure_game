@@ -29,8 +29,5 @@ public class GameTest {
         assertEquals(5, game1.getRooms().size());
     }
 
-    @Test
-    public void roomsHaveCreatures(){
 
-    }
 }

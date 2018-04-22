@@ -18,7 +18,13 @@ public class Game {
     public Game(String name){
         this.name = name;
         this.heroes = new ArrayList<>();
+
         ArrayList<Room> generatedRooms = new ArrayList<>();
+        room1 = new Room();
+        room2 = new Room();
+        room3 = new Room();
+        room4 = new Room();
+        room5 = new Room();
         generatedRooms.add(room1);
         generatedRooms.add(room2);
         generatedRooms.add(room3);
