@@ -5,6 +5,7 @@ import Characters.Heroes.Healers.Cleric;
 import Characters.Heroes.Mages.Spell;
 import Characters.Heroes.Mages.Warlock;
 import Characters.Character;
+import Characters.Heroes.Hero;
 import org.junit.Before;
 import Room.Room;
 import org.junit.Test;
@@ -60,8 +61,9 @@ public class RoomTest {
         assertEquals(true, room1.noHeroesAlive());
     }
 
-    @Test public void heroCanCollectTreasure(){
-        
+    @Test public void heroCanCollectTreasureFromRoom(){
+        room1.collectTreasure();
+        assertEquals(1, hero1.getInventory().size());
     }
 
 //    @Test
