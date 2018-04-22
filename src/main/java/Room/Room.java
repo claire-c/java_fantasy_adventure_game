@@ -47,6 +47,16 @@ public class Room {
         this.treasure = null;
     }
 
+    public ArrayList<Hero> returnRemainingHeroes(){
+        ArrayList<Hero> remainingHeroes = new ArrayList<>();
+        for (Hero hero : heroes){
+            if(hero.characterDead() == false){
+                remainingHeroes.add(hero);
+            }
+        }
+        return remainingHeroes;
+    }
+
 //    public ArrayList<Character> encounter( ArrayList<Character> heroes){
 //
 //    }

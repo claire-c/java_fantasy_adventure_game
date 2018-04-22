@@ -73,11 +73,23 @@ public class RoomTest {
         assertEquals(null, fullroom.getTreasure());
     }
 
+    @Test
+    public void roomCanReturnRemainingHeroes(){
+        hero1.setHp(0);
+        room1.addHeroes(hero1);
+        room1.addHeroes(hero2);
+        room1.addHeroes(hero3);
+        ArrayList<Hero> heroes = room1.returnRemainingHeroes();
+        assertEquals(2, heroes.size());
+    }
+
 //    @Test
 //    public void heroesCanFightMonsterInRoom(){
-//        fullroom.heroesFight();
-//        assertEquals(fullroom.getMonster().getHp() <= 0, fullroom.getMonster().getHp());
-//        assertEquals(hero1.getHp() != 100, hero1.getHp());
+//        fullroom.heroesFightMonster();
+//        assertEquals(true, fullroom.getMonster().characterDead());
+//        assertFalse(hero1.characterDead());
+//        assertFalse(hero2.characterDead());
+//        assertFalse(hero3.characterDead());
 //    }
     //Oh man, how to test for an array of fighters fighting?! Let's see how this one goes.
 
