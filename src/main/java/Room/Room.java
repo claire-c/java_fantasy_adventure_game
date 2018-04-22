@@ -3,6 +3,7 @@ package Room;
 import Characters.Character;
 import Characters.Creatures.Creature;
 import Characters.Creatures.CreatureType;
+import Characters.Heroes.Hero;
 import Characters.Heroes.Treasure;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ public class Room {
 
     private Character monster;
     private Treasure treasure;
-    private ArrayList<Character> heroes;
+    private ArrayList<Hero> heroes;
 
 
     public Room(){
@@ -28,7 +29,7 @@ public class Room {
         return treasure;
     }
 
-    public ArrayList<Character> getHeroes() {
+    public ArrayList<Hero> getHeroes() {
         return heroes;
     }
 
@@ -36,8 +37,14 @@ public class Room {
         return heroes.isEmpty();
     }
 
-    public void collectTreasure(){
+    public void addHeroes(Hero hero){
+        heroes.add(hero);
+    }
 
+    public void heroesCollectTreasure(){
+        Hero hero = heroes.get(0);
+        hero.addToInventory(this.treasure);
+        this.treasure = null;
     }
 
 //    public ArrayList<Character> encounter( ArrayList<Character> heroes){
