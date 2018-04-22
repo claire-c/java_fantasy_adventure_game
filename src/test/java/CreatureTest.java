@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class CreatureTest {
 
@@ -89,6 +91,17 @@ public class CreatureTest {
     public void trollWillRarelyAttackSignatureMove(){
         troll.signatureMove(cleric);
         assertEquals(100, cleric.getHp());
+    }
+
+    @Test
+    public void creatureIsntDead(){
+        assertFalse(troll.creatureDead());
+    }
+
+    @Test
+    public void creatureIsDead(){
+        troll.setHp(0);
+        assertTrue(troll.creatureDead());
     }
 
 //

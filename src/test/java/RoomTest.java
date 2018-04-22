@@ -74,6 +74,15 @@ public class RoomTest {
     }
 
 //    @Test
+//    public void heroesCanFightMonsterInRoom(){
+//        fullroom.heroesFight();
+//        assertEquals(fullroom.getMonster().getHp() <= 0, fullroom.getMonster().getHp());
+//        assertEquals(hero1.getHp() != 100, hero1.getHp());
+//    }
+    //Oh man, how to test for an array of fighters fighting?! Let's see how this one goes.
+
+
+//    @Test
 //    public void canFight(){
 //        room1.encounter(heroes);
 //    }
