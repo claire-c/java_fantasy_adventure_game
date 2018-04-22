@@ -16,6 +16,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class RoomTest {
     private Room room1;
+    private Room fullroom;
     private Hero hero1;
     private Hero hero2;
     private Hero hero3;
@@ -30,9 +31,10 @@ public class RoomTest {
         hero2 = new Warlock("Ashley", Spell.FIREBALL, creature1);
         hero3 = new Cleric("Pawel");
         ArrayList<Hero> heroes = new ArrayList<>();
-        heroes.add(hero1);
-        heroes.add(hero2);
-        heroes.add(hero3);
+        fullroom = new Room();
+        fullroom.addHeroes(hero1);
+        fullroom.addHeroes(hero2);
+        fullroom.addHeroes(hero3);
     }
 
     @Test
@@ -57,22 +59,19 @@ public class RoomTest {
 
     @Test
     public void canAddHeroesToRoom(){
-        room1.addHeroes(hero1);
-        room1.addHeroes(hero2);
-        room1.addHeroes(hero3);
-        assertEquals(3, room1.getHeroes().size());
+        assertEquals(3, fullroom.getHeroes().size());
     }
 
     @Test
     public void startNoHeroesAlive(){
         assertEquals(true, room1.noHeroesAlive());
     }
-//
-//    @Test public void heroCanCollectTreasureFromRoom(){
-//        room1.heroesCollectTreasure();
-//        assertEquals(1, hero1.getInventory().size());
-//        assertEquals(null, room1.getTreasure());
-//    }
+
+    @Test public void firstHeroCanCollectTreasureFromRoom(){
+        fullroom.heroesCollectTreasure();
+        assertEquals(1, hero1.getInventory().size());
+        assertEquals(null, fullroom.getTreasure());
+    }
 
 //    @Test
 //    public void canFight(){
