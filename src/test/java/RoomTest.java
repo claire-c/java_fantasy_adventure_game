@@ -60,6 +60,10 @@ public class RoomTest {
         assertEquals(true, room1.noHeroesAlive());
     }
 
+    @Test public void heroCanCollectTreasure(){
+        
+    }
+
 //    @Test
 //    public void canFight(){
 //        room1.encounter(heroes);

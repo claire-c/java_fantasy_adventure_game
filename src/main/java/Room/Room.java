@@ -36,6 +36,10 @@ public class Room {
         return heroes.isEmpty();
     }
 
+    public void collectTreasure(){
+
+    }
+
 //    public ArrayList<Character> encounter( ArrayList<Character> heroes){
 //
 //    }

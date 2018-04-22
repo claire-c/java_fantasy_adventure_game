@@ -70,7 +70,6 @@ public class ClericTest {
     @Test
     public void canGetHealingToolChanceValue(){
         assertEquals(clericHealingTool.getChanceValue(), cleric.getHealingTool().getChanceValue());
-
     }
 
 //    @Test
@@ -111,6 +110,7 @@ public class ClericTest {
         assertEquals(clericHealingTool, cleric.getHealingTool());
     }
 // So this test is failing but it's defo bringing back a random HealingTool object. Each test has returned a different int - not the same random one, argh. Bug to fix.
+
 
 
 
