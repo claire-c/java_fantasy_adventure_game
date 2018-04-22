@@ -12,6 +12,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
 public class RoomTest {
@@ -74,23 +75,23 @@ public class RoomTest {
     }
 
     @Test
-    public void roomCanReturnRemainingHeroes(){
+    public void roomCanGetRemainingHeroesAfterFight(){
         hero1.setHp(0);
         room1.addHeroes(hero1);
         room1.addHeroes(hero2);
         room1.addHeroes(hero3);
-        ArrayList<Hero> heroes = room1.returnRemainingHeroes();
-        assertEquals(2, heroes.size());
+        ArrayList<Hero> remainingHeroes = room1.returnRemainingHeroes();
+        assertEquals(2, remainingHeroes.size());
     }
 
-//    @Test
-//    public void heroesCanFightMonsterInRoom(){
-//        fullroom.heroesFightMonster();
-//        assertEquals(true, fullroom.getMonster().characterDead());
-//        assertFalse(hero1.characterDead());
-//        assertFalse(hero2.characterDead());
-//        assertFalse(hero3.characterDead());
-//    }
+    @Test
+    public void heroesCanFightMonsterInRoom(){
+        fullroom.heroesFightMonster();
+        assertEquals(true, fullroom.getMonster().characterDead());
+        assertFalse(hero1.characterDead());
+        assertFalse(hero2.characterDead());
+        assertFalse(hero3.characterDead());
+    }
     //Oh man, how to test for an array of fighters fighting?! Let's see how this one goes.
 
 

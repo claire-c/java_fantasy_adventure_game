@@ -50,7 +50,7 @@ public class Room {
     public ArrayList<Hero> returnRemainingHeroes(){
         ArrayList<Hero> remainingHeroes = new ArrayList<>();
         for (Hero hero : heroes){
-            if(hero.characterDead() == false){
+            if(!hero.characterDead()){
                 remainingHeroes.add(hero);
             }
         }
