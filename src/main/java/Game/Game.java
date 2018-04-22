@@ -73,4 +73,11 @@ public class Game {
         heroes.add(new Warlock(name, spell, creature));
     }
 
+    public void addHeroesToFirstRoom(){
+        ArrayList<Hero> heroesInHallway = new ArrayList<>();
+        int heroCount = heroes.size();
+        for (int i = 0; i < heroCount ; i++) {
+            heroesInHallway.add(heroes.remove(0));}
+            rooms.get(0).addHeroesFromHallway(heroesInHallway);
+        }
 }
