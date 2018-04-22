@@ -88,8 +88,31 @@ public class GameTest {
     }
 
     @Test
-    public void canHandPlayersToRoom(){
+    public void canHandCharacterToFirstRoom(){
+        game1.addKnight("Mike");
+        Hero knightAdded = game1.getHeroes().get(0);
+        assertEquals(1, game1.getHeroes().size());
+        game1.addHeroesToFirstRoom();
+        assertEquals(0, game1.getHeroes().size());
+        assertEquals(1, game1.getRooms().get(0).getHeroes().size());
+        assertEquals(knightAdded, game1.getRooms().get(0).getHeroes().get(0));
+    }
 
+    @Test
+    public void canAddMultipleCharactersToFirstRoom(){
+        game1.addKnight("Mike");
+        game1.addBarbarian("Mariana");
+        game1.addDwarf("Simon");
+        Hero knightAdded = game1.getHeroes().get(0);
+        Hero barbarianAdded = game1.getHeroes().get(1);
+        Hero dwarfAdded = game1.getHeroes().get(2);
+        assertEquals(3, game1.getHeroes().size());
+        game1.addHeroesToFirstRoom();
+        assertEquals(0, game1.getHeroes().size());
+        assertEquals(3, game1.getRooms().get(0).getHeroes().size());
+        assertEquals(knightAdded, game1.getRooms().get(0).getHeroes().get(0));
+        assertEquals(barbarianAdded, game1.getRooms().get(0).getHeroes().get(1));
+        assertEquals(dwarfAdded, game1.getRooms().get(0).getHeroes().get(2));
     }
 
 
