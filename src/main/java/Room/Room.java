@@ -84,6 +84,13 @@ public class Room {
 
     }
 
+    public void encounter(){
+        fight();
+        if(!returnRemainingHeroes().isEmpty()){
+            heroesCollectTreasure();
+        }
+    }
+
 
 
 

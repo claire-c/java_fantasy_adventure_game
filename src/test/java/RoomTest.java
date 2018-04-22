@@ -90,7 +90,7 @@ public class RoomTest {
         assertFalse(hero2.characterDead());
         assertFalse(hero3.characterDead());
     }
-    //Oh man, how to test for an array of fighters fighting?! With the debugger you can see that every time this test is run the fighters and/or creature take damage so the method is working.
+    //Oh man, how to test for an array of fighters fighting?! With the debugger you can see that every time this test is run the fighters and/or creature take damage so I think the method is working.
 
     @Test
     public void allHeroesAreAlive(){
@@ -123,10 +123,15 @@ public class RoomTest {
 //        fullroom.fight();
 //        assertEquals(0, fullroom.returnRemainingHeroes().size());
 //    }
-    //Another nightmare test - but it is returning variable array lengths, showing that the method is working. It also occasionally passes, showing that the monster has won. 
+    //Another nightmare test - but it is returning variable array lengths, showing that the method is working (I think!). It also occasionally passes, showing that the monster has won.
 
-//    @Test
-//    public void canFight(){
-//        room1.encounter(heroes);
-//    }
+    @Test
+    public void heroesCanHaveRoomEncounter(){
+        fullroom.encounter();
+        assertEquals(null, fullroom.getTreasure());
+    }
+    //This test almost always passes, but now and again our heroes don't make it and the room still has treasure.
+
+
+
 }
