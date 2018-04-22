@@ -87,4 +87,10 @@ public class GameTest {
         assertEquals(warlock1.getName(), game1.getHeroes().get(0).getName());
     }
 
+    @Test
+    public void canHandPlayersToRoom(){
+
+    }
+
+
 }

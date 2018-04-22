@@ -72,4 +72,5 @@ public class Game {
     public void addWarlock(String name, Spell spell, Creature creature){
         heroes.add(new Warlock(name, spell, creature));
     }
+
 }
