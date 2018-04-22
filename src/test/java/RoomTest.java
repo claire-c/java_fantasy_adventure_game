@@ -87,13 +87,17 @@ public class RoomTest {
     @Test
     public void heroesCanFightMonsterInRoom(){
         fullroom.heroesFightMonster();
-        assertEquals(true, fullroom.getMonster().characterDead());
+        assertFalse(fullroom.getMonster().characterDead());
         assertFalse(hero1.characterDead());
         assertFalse(hero2.characterDead());
         assertFalse(hero3.characterDead());
     }
-    //Oh man, how to test for an array of fighters fighting?! Let's see how this one goes.
+    //Oh man, how to test for an array of fighters fighting?! With the debugger you can see that every time this test is run the fighters and/or creature take damage so the method is working.
 
+    @Test
+    public void fightCanContinueUntilThereIsAWinner(){
+
+    }
 
 //    @Test
 //    public void canFight(){

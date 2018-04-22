@@ -41,12 +41,14 @@ public class Room {
         heroes.add(hero);
     }
 
+    //To build up the encounter method - collectTreasure to be used as a conditional if any heroes remain alive.
     public void heroesCollectTreasure(){
         Hero hero = heroes.get(0);
         hero.addToInventory(this.treasure);
         this.treasure = null;
     }
 
+    //To build up the encounter method - returning our heroes at the end of a fight if any remain alive afterwards.
     public ArrayList<Hero> returnRemainingHeroes(){
         ArrayList<Hero> remainingHeroes = new ArrayList<>();
         for (Hero hero : heroes){
@@ -56,6 +58,16 @@ public class Room {
         }
         return remainingHeroes;
     }
+
+    public void heroesFightMonster(){
+        for(Hero hero : heroes){
+            hero.standardMove(monster);
+            monster.standardMove(hero);
+        }
+
+    }
+
+    
 
 //    public ArrayList<Character> encounter( ArrayList<Character> heroes){
 //
