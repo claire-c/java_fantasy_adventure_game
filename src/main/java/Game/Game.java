@@ -1,6 +1,14 @@
 package Game;
 
+import Characters.Creatures.Creature;
+import Characters.Heroes.*;
+import Characters.Heroes.Fighters.Dwarf;
+import Characters.Heroes.Fighters.Knight;
+import Characters.Heroes.Fighters.Barbarian;
+import Characters.Heroes.Healers.Cleric;
 import Characters.Heroes.Hero;
+import Characters.Heroes.Mages.Spell;
+import Characters.Heroes.Mages.Warlock;
 import Room.Room;
 
 import java.util.ArrayList;
@@ -45,7 +53,23 @@ public class Game {
         return heroes;
     }
 
+    public void addKnight(String name){
+        heroes.add(new Knight(name));
+    }
 
+    public void addDwarf(String name){
+        heroes.add(new Dwarf(name));
+    }
 
+    public void addBarbarian(String name){
+        heroes.add(new Barbarian(name));
+    }
 
+    public void addCleric(String name){
+        heroes.add(new Cleric(name));
+    }
+
+    public void addWarlock(String name, Spell spell, Creature creature){
+        heroes.add(new Warlock(name, spell, creature));
+    }
 }
