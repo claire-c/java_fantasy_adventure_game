@@ -41,6 +41,10 @@ public class Room {
         heroes.add(hero);
     }
 
+    public void addHeroesFromHallway(ArrayList<Hero> heroesFromHallway){
+        heroes = heroesFromHallway;
+    }
+
     //For encounter- collectTreasure to be used as a conditional if any heroes remain alive.
     public void heroesCollectTreasure(){
         Hero hero = heroes.get(0);
