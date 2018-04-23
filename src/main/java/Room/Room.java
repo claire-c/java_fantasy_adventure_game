@@ -68,7 +68,7 @@ public class Room {
 
     }
 
-    //For encounter. A boolean to check is there are any heroes left alive after the fight round.
+    //For encounter. A boolean to check is there are any heroes left alive after the fight round. Can probably remove this and use remainingHeroes.isempty() as a conditional.
     public boolean allHeroesDead(){
         ArrayList<Hero> aliveHeroes = new ArrayList<>();
         for(Hero hero : heroes){
