@@ -45,8 +45,11 @@ public abstract class Character {
     }
 
     public boolean shouldDoMove(int chanceValue){
-        if(diceRoll() <= chanceValue){return true;}
-        else{return false;}
+        if (diceRoll() <= chanceValue) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     //move1

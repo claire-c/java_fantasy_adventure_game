@@ -85,11 +85,12 @@ public class Room {
 
     }
 
-    public void encounter(){
+    public ArrayList<Hero> encounter(){
         fight();
-        if(!returnRemainingHeroes().isEmpty()){
+        if(!returnRemainingHeroes().isEmpty()) {
             heroesCollectTreasure();
         }
+            return returnRemainingHeroes();
     }
 
 

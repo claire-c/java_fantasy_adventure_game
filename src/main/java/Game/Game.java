@@ -1,10 +1,9 @@
 package Game;
 
 import Characters.Creatures.Creature;
-import Characters.Heroes.*;
+import Characters.Heroes.Fighters.Barbarian;
 import Characters.Heroes.Fighters.Dwarf;
 import Characters.Heroes.Fighters.Knight;
-import Characters.Heroes.Fighters.Barbarian;
 import Characters.Heroes.Healers.Cleric;
 import Characters.Heroes.Hero;
 import Characters.Heroes.Mages.Spell;
@@ -22,6 +21,12 @@ public class Game {
     private Room room3;
     private Room room4;
     private Room room5;
+
+
+
+
+
+
 
     public Game(String name){
         this.name = name;
