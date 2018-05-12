@@ -48,9 +48,11 @@ On first glance, this felt like a big weekend project to tackle. However, collab
 
 We broke down the game together, made joint decisions about how to build the game and had several discussions with differing viewpoints; it was extremely useful to see how someone else thinks and approaches problems.
 
+It was good to start to work with some of git's functionality - branching is obviously extremely useful and it was great to get a head start on it (we don't look at branching until our Javascipt project in week 14).
+
 We used randomisation in our project (dice roll methods), which made for some testing difficulties. This was a great learning point.
 
-I also learned it's quite pointless to code when you're tired, as you'll just create problems for yourself with bugs and bad decisions! 
+I also learned it's quite pointless to code when you're tired, as you'll just create problems for yourself with bugs and bad decisions!
 
 ## If I had more time
 
